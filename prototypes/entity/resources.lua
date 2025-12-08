@@ -68,7 +68,7 @@ data:extend({
     {
       name = "amalgam",
       order = "b",
-      map_color = {0.803, 0.388, 0.215},
+      map_color = {0.35, 0.65, 0.65},
       mining_time = 1,
       result = "amalgam",
       walking_sound = sounds.ore,
@@ -77,7 +77,8 @@ data:extend({
       entityicon = "__Krastorio2Assets__/resources/rare-metal-ore/rare-metal-ore.png",
     },
     {
-      probability_expression = 0
+    probability_expression = "amalgam_probability",
+    richness_expression = "amalgam_richness"
     }
   ),
   {--amalgam autoplace controls
