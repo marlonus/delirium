@@ -14,14 +14,17 @@ planet_map_gen.delur = function()
       ["entity:amalgam:richness"] = "amalgam_richness",
       ["entity:calcite:probability"] = "calcite_probability",
       ["entity:calcite:richness"] = "calcite_richness",
-      ["entity:tungsten-ore:probability"] = "tungsten_ore_probability",
-      ["entity:tungsten-ore:richness"] = "tungsten_ore_richness",
+      ["entity:wolframite:probability"] = "control:wolframite_probability",
+      ["entity:wolframite:richness"] = "control:wolframite_richness",
+      ["entity:shale:probability"] = "shale_probability",
+      ["entity:shale:richness"] = "shale_richness",
     },
     autoplace_controls =
     {
       ["amalgam"] = {},
       ["calcite"] = {},
-      ["tungsten_ore"] = {},
+      ["shale"] = {},
+      ["wolframite"] = {},
       ["nauvis_cliff"] = {}
     },
     cliff_settings =
@@ -46,7 +49,7 @@ planet_map_gen.delur = function()
           ["fulgoran-dust"] = {},
           ["fulgoran-sand"] = {},
           ["fulgoran-rock"] = {},
-          ["ice-smooth"] = {},
+        --  ["ice-smooth"] = {},
         }
       },
       ["decorative"] =
@@ -72,7 +75,8 @@ planet_map_gen.delur = function()
         {
           ["amalgam"] = {},
           ["calcite"] = {},
-          ["tungsten-ore"] = {},
+          ["shale"] = {},
+          ["wolframite"] = {},
         }
       }
     }
@@ -101,10 +105,10 @@ data:extend{
         ),0,1)
         * clamp(-starting_amalgam*10-0.2,0,1) 
         * clamp(-starting_calcite*10-0.3,0,1) 
-        * clamp(-starting_tungsten*10-0.3,0,1) 
+        * clamp(-starting_wolframite*10-0.3,0,1) 
         + 0.5 * clamp((starting_amalgam*10+0.3 >0),0,1)
         + 0.5 * clamp((starting_calcite*10+0.3 >0),0,1)
-        + 0.5 * clamp((starting_tungsten*10+0.3 >0),0,1)
+        + 0.5 * clamp((starting_wolframite*10+0.3 >0),0,1)
     ]],
     parameters = {"xx", "yy"}
   }
@@ -246,7 +250,7 @@ data:extend({--starting ore patches
   },
     {
     type = "noise-expression",
-    name = "starting_tungsten",
+    name = "starting_wolframite",
     expression = "starting_spot_at_angle{\z
 			angle = map_seed_normalized * 3600,\z
     	distance = 70,\z
@@ -254,6 +258,17 @@ data:extend({--starting ore patches
     	x_distortion =  delur_wobble_x*4,\z
     	y_distortion =  delur_wobble_y*4\z
 			}"
+  },
+  {
+    type = "noise-expression",
+    name = "starting_shale",
+    expression = "starting_spot_at_angle{\z
+        angle = (map_seed_normalized * 3600)+300,\z
+        distance = 70,\z
+        radius = 15,\z
+        x_distortion =  delur_wobble_x*4,\z
+        y_distortion =  delur_wobble_y*4\z
+        \t\t}"
   },
 })
 
@@ -316,22 +331,37 @@ data:extend({--delur ore generations.
     expression = "max(starting_amalgam*10, (control:amalgam:size > 0) * (amalgam_richness > 1) * 0.9)"
 },
 
-{--tungsten ore expression
+{--wolframite ore expression
     type = "noise-expression",
-    name = "tungsten_ore_richness",
-    -- GEÄNDERT: Seed 1002
-    expression = "(distance_from_center*2+600) * max(4*starting_tungsten , (delur_simple_spot(1002, 40 * size ^ 0.5, 600 / frequency ^ 0.5,1)) * richness / size)",
+    name = "wolframite_richness",
+    expression = "(distance_from_center*2+600) * max(4*starting_wolframite , (delur_simple_spot(1002, 40 * size ^ 0.5, 600 / frequency ^ 0.5,1)) * richness / size)",
     local_expressions =
     {
-        richness = "control:tungsten_ore:richness", -- WICHTIGE KORREKTUR des control-Namens
-        frequency = "control:tungsten_ore:frequency",
-        size = "control:tungsten_ore:size",
+        richness = "control:wolframite:richness",
+        frequency = "control:wolframite:frequency",
+        size = "control:wolframite:size",
     }
 },
-{--tungsten ore placement
+{--wolframite ore placement
     type = "noise-expression",
-    name = "tungsten_ore_probability",
-    expression = "max(starting_tungsten*10, (control:tungsten_ore:size > 0) * (tungsten_ore_richness > 1) * 0.9)"
+    name = "wolframite_probability",
+    expression = "max(starting_wolframite*10, (control:wolframite:size > 0) * (control:wolframite:richness > 1) * 0.9)"
+},
+{--shale expression
+    type = "noise-expression",
+    name = "shale_richness",
+    expression = "(distance_from_center*2+600) * max(4*starting_shale , (delur_simple_spot(1003, 40 * size ^ 0.5, 600 / frequency ^ 0.5,1)) * richness / size)",
+    local_expressions =
+    {
+        richness = "control:shale:richness",
+        frequency = "control:shale:frequency",
+        size = "control:shale:size",
+    }
+},
+{--shale placement
+    type = "noise-expression",
+    name = "shale_probability",
+    expression = "max(starting_shale*10, (control:shale:size > 0) * (shale_richness > 1) * 0.9)"
 },
 	{
     type = "noise-function",
@@ -504,8 +534,8 @@ data.raw.tile["ice-smooth"].autoplace = {
   {
     type = "planet",
     name = "nauvis",
-    icon = "__base__/graphics/icons/nauvis.png",
-    starmap_icon = "__base__/graphics/icons/starmap-planet-nauvis.png",
+    icon = "__delirium__/graphics/icons/planets/delur.png",
+    starmap_icon = "__delirium__/graphics/icons/planets/delur.png",
     starmap_icon_size = 512,
     gravity_pull = 10,
     distance = 15,

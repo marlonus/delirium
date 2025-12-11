@@ -72,7 +72,7 @@ data:extend({
       mining_time = 1,
       result = "amalgam",
       walking_sound = sounds.ore,
-      mining_visualisation_tint = {r = 1.000, g = 0.675, b = 0.541, a = 1.000},
+      mining_visualisation_tint = {r = 0.35, g = 0.65, b = 0.65, a = 1.000},
       icon = "__Krastorio2Assets__/icons/resources/rare-metal-ore.png",
       entityicon = "__Krastorio2Assets__/resources/rare-metal-ore/rare-metal-ore.png",
     },
@@ -90,4 +90,55 @@ data:extend({
     category = "resource"
   },
 
+  resource(--shale
+    {
+      name = "shale",
+      order = "b",
+      map_color = {0.14, 0.58, 0.74},
+      mining_time = 0.5,
+      result = "shale",
+      walking_sound = sounds.ore,
+      mining_visualisation_tint = {r = 0.14, g = 0.58, b = 0.74, a = 1.000},
+      icon = "__delirium__/graphics/icons/items/resources/shale/shale.png",
+      entityicon = "__delirium__/graphics/icons/items/resources/shale/shale-ore.png",
+    },
+    {
+    probability_expression = "shale_probability",
+    richness_expression = "shale_richness"
+    }
+  ),
+  {--shale autoplace controls
+    type = "autoplace-control",
+    name = "shale",
+    localised_name = {"", "[entity=shale] ", {"entity-name.shale"}},
+    richness = true,
+    order = "a-a",
+    category = "resource"
+  },
+
+  resource(--wolframite
+    {
+      name = "wolframite",
+      order = "b",
+      map_color = {0.54, 0.03, 0.74},
+      mining_time = 1,
+      result = "wolframite",
+      walking_sound = sounds.ore,
+      mining_visualisation_tint = {r = 0.14, g = 0.58, b = 0.74, a = 1.000},
+      icon = "__delirium__/graphics/icons/items/resources/wolframite/wolframite.png",
+      entityicon = "__delirium__/graphics/icons/items/resources/wolframite/wolframite-ore.png",
+    },
+    {
+    probability_expression = "wolframite_probability",
+    richness_expression = "wolframite_richness"
+    }
+  ),
+  {--wolframite autoplace controls
+    type = "autoplace-control",
+    name = "wolframite",
+    localised_name = {"", "[entity=wolframite] ", {"entity-name.wolframite"}},
+    richness = true,
+    order = "a-a",
+    category = "resource"
+  },
 })

@@ -67,6 +67,7 @@
     data.raw["autoplace-control"]["lithium_brine"].hidden = true
     data.raw["autoplace-control"]["fluorine_vent"].hidden = true
     data.raw["autoplace-control"]["aquilo_crude_oil"].hidden = true
+    data.raw["autoplace-control"]["tungsten_ore"].hidden = true
 
 --disable the nauvis climate controls.
 
