@@ -186,9 +186,7 @@ data:extend({
                 {type = "unlock-recipe", recipe = "underground-pipe"},
                 {type = "unlock-recipe", recipe = "fluid-tank"},
                 {type = "unlock-recipe", recipe = "pump"},
-                {type = "unlock-recipe", recipe = "overflow"},
-                {type = "unlock-recipe", recipe = "top-up"},
-                {type = "unlock-recipe", recipe = "one-way"},
+
                 {type = "unlock-recipe", recipe = "amalgam-basic-piping"},
         },
     },
@@ -244,6 +242,7 @@ data:extend({
                 {type = "unlock-recipe", recipe = "amalgam-crushing"},
                 {type = "unlock-recipe", recipe = "amalgam-sorting"},
                 {type = "unlock-recipe", recipe = "dirty-water-purification"},
+                {type = "unlock-recipe", recipe = "dirty-water-dumping"},
         },
     },
     {
@@ -298,6 +297,27 @@ data:extend({
                 {type = "unlock-recipe", recipe = "glass-casting"},
                 {type = "unlock-recipe", recipe = "glass-tube"},
                 {type = "unlock-recipe", recipe = "glass-lens"},
+                {type = "unlock-recipe", recipe = "beaker"},
+        },
+    },
+    {
+        type = "technology",
+        name = "chemical-utilization-science-pack",
+        icon = "__base__/graphics/icons/logistic-science-pack.png",
+        essential = true,
+        prerequisites = {
+            "iron-processing", "glassworking"
+        },
+          unit =
+        {
+            count = 35,
+            ingredients = {{"automation-science-pack", 1}},
+            time = 10
+        },
+        effects = {
+                {type = "unlock-recipe", recipe = "assembler-2"},
+                {type = "unlock-recipe", recipe = "vacuum-tube"},
+                {type = "unlock-recipe", recipe = "chemical-utilization-science-pack"},
         },
     },
 })

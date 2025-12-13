@@ -282,6 +282,23 @@ data:extend({
             usage_priority = 'secondary-input',
         },
         energy_usage = "150kW",
+        fluid_boxes = {
+            {   
+                volume = 200,
+                pipe_connections = {
+                    {flow_direction = "input", direction = defines.direction.east, position = {3, 0}},
+                },
+                production_type = "input",
+            },
+            {   
+                volume = 200,
+                pipe_connections = {
+                    {flow_direction = "output", direction = defines.direction.west, position = {-3, 0}},
+                },
+                production_type = "output",
+            },
+        },
+        fluid_boxes_off_when_no_fluid_recipe = true,
         graphics_set = {
             animation = {
                 filename = "__delirium__/graphics/icons/entity/sorter.png",

@@ -4,6 +4,177 @@
     end
 
 data:extend({
+
+    {
+  type = "item-group",
+  name = "components",
+  icon = "__delirium__/graphics/icons/group/components.png",
+  icon_size = 1024,
+  localised_name = {"", format_name("components")}
+    },
+    {
+  type = "item-subgroup",
+  name = "plating",
+  group = "components",
+  order = "a"
+    },
+    {
+  type = "item-subgroup",
+  name = "beam",
+  group = "components",
+  order = "b"
+    },
+    {
+  type = "item-subgroup",
+  name = "gear",
+  group = "components",
+  order = "c"
+    },
+    {
+  type = "item-subgroup",
+  name = "bearing",
+  group = "components",
+  order = "d"
+    },
+    {
+  type = "item-subgroup",
+  name = "spring",
+  group = "components",
+  order = "e"
+    },
+    {
+  type = "item-subgroup",
+  name = "rivets",
+  group = "components",
+  order = "f"
+    },
+    {
+  type = "item-subgroup",
+  name = "rod",
+  group = "components",
+  order = "g"
+    },
+    {
+  type = "item-subgroup",
+  name = "cabling",
+  group = "components",
+  order = "h"
+    },
+    {
+  type = "item-subgroup",
+  name = "ribbon",
+  group = "components",
+  order = "i"
+    },
+    {
+  type = "item-subgroup",
+  name = "coil",
+  group = "components",
+  order = "j"
+    },
+    {
+  type = "item-subgroup",
+  name = "solder",
+  group = "components",
+  order = "k"
+    },
+    {
+  type = "item-subgroup",
+  name = "piping",
+  group = "components",
+  order = "l"
+    },
+    {
+  type = "item-subgroup",
+  name = "wiring",
+  group = "components",
+  order = "m"
+    },
+    {
+  type = "item-subgroup",
+  name = "misc",
+  group = "components",
+  order = "n"
+    },
+    {
+  type = "item-subgroup",
+  name = "glass",
+  group = "components",
+  order = "o"
+    },
+    {
+  type = "item-group",
+  name = "resources",
+  icon = "__delirium__/graphics/icons/group/resources.png",
+  icon_size = 1024,
+  localised_name = {"", format_name("resources")}
+    },
+    {
+  type = "item-subgroup",
+  name = "amalgam",
+  group = "resources",
+  order = "a"
+    },
+    {
+  type = "item-subgroup",
+  name = "crystallite",
+  group = "resources",
+  order = "b"
+    },
+    {
+  type = "item-subgroup",
+  name = "wolframite",
+  group = "resources",
+  order = "c"
+    },
+    {
+  type = "item-subgroup",
+  name = "shale",
+  group = "resources",
+  order = "d"
+    },
+    {
+  type = "item-subgroup",
+  name = "stone",
+  group = "resources",
+  order = "e"
+    },
+    {
+  type = "item-subgroup",
+  name = "iron",
+  group = "resources",
+  order = "f"
+    },
+    {
+  type = "item-subgroup",
+  name = "aluminium",
+  group = "resources",
+  order = "g"
+    },
+    {
+  type = "item-subgroup",
+  name = "copper",
+  group = "resources",
+  order = "h"
+    },
+    {
+  type = "item-subgroup",
+  name = "tin",
+  group = "resources",
+  order = "i"
+    },
+    {
+  type = "item-subgroup",
+  name = "zinc",
+  group = "resources",
+  order = "j"
+    },
+    {
+  type = "item-subgroup",
+  name = "titanium",
+  group = "resources",
+  order = "k"
+    },
         {
         type = "recipe",
         name = "amalgam-smelting",
@@ -13,8 +184,8 @@ data:extend({
         results = {
             {type = "item", name ="amalgam-ingot", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "amalgam",
+        order = "a",
         ingredients = {
             {type = "item", name ="amalgam", amount = 2},
         },
@@ -28,8 +199,8 @@ data:extend({
         results = {
             {type = "item", name ="amalgam-plate", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "amalgam",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="amalgam-ingot", amount = 1},
         },
@@ -43,8 +214,8 @@ data:extend({
         results = {
             {type = "item", name ="stabilized-crystallite", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "crystallite",
+        order = "b",
         ingredients = {
             {type = "item", name ="calcite", amount = 2},
         },
@@ -61,8 +232,8 @@ data:extend({
             {type = "item", name ="wolframite-powder", amount = 2},
             {type = "item", name ="slag", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "wolframite",
+        order = "c-b",
         ingredients = {
             {type = "item", name ="wolframite", amount = 1},
         },
@@ -76,8 +247,8 @@ data:extend({
         results = {
             {type = "item", name ="wolframite-powder", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "wolframite",
+        order = "c",
         ingredients = {
             {type = "item", name ="wolframite", amount = 4},
         },
@@ -91,8 +262,8 @@ data:extend({
         results = {
             {type = "item", name ="alloy-support-structure", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "intermediate-product",
+        order = "a",
         ingredients = {
             {type = "item", name ="basic-beam", amount = 2},
             {type = "item", name ="basic-rivets", amount = 2},
@@ -108,8 +279,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-wiring", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "wiring",
+        order = "a",
         ingredients = {
             {type = "item", name ="amalgam-ingot", amount = 1},
         },
@@ -123,8 +294,8 @@ data:extend({
         results = {
             {type = "item", name ="graphite", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "shale",
+        order = "a",
         ingredients = {
             {type = "item", name ="shale", amount = 2},
         },
@@ -141,8 +312,8 @@ data:extend({
             {type = "item", name ="calibration-coil", amount = 2},
             {type = "item", name ="unstable-crystallite", amount = 1, probability = 0.5},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "intermediate-product",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="basic-coil", amount = 2},
             {type = "item", name ="stabilized-crystallite", amount = 2},
@@ -157,8 +328,8 @@ data:extend({
         results = {
             {type = "item", name ="stabilized-crystallite", amount = 1, probability = 0.5},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "crystallite",
+        order = "b-b",
         ingredients = {
             {type = "item", name ="unstable-crystallite", amount = 1},
         },
@@ -172,8 +343,8 @@ data:extend({
         results = {
             {type = "item", name ="electronic-circuit", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "intermediate-product",
+        order = "a-c",
         ingredients = {
             {type = "item", name ="stabilized-crystallite", amount = 1},
             {type = "item", name ="basic-wiring", amount = 3},
@@ -189,7 +360,7 @@ data:extend({
             {type = "item", name ="automation-science-pack", amount = 2},
         },
         subgroup = "science-pack",
-        order = "c-z",
+        order = "a",
         ingredients = {
             {type = "item", name ="calibration-coil", amount = 1},
             {type = "item", name ="alloy-support-structure", amount = 1},
@@ -204,8 +375,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-beam", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "beam",
+        order = "a",
         ingredients = {
             {type = "item", name ="amalgam-plate", amount = 1},
         },
@@ -220,8 +391,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-plating", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "plating",
+        order = "a",
         ingredients = {
             {type = "item", name ="amalgam-plate", amount = 1},
         },
@@ -236,8 +407,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-gear", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "gear",
+        order = "a",
         ingredients = {
             {type = "item", name ="amalgam-ingot", amount = 2},
         },
@@ -252,8 +423,8 @@ data:extend({
         results = {
             {type = "item", name ="thin-plating", amount = 4},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "plating",
+        order = "b",
         ingredients = {
             {type = "item", name ="amalgam-plate", amount = 1},
         },
@@ -268,8 +439,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-spring", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "spring",
+        order = "a",
         ingredients = {
             {type = "item", name ="amalgam-plate", amount = 1},
         },
@@ -284,8 +455,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-rod", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "rod",
+        order = "a",
         ingredients = {
             {type = "item", name ="amalgam-plate", amount = 1},
         },
@@ -300,8 +471,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-coil", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "coil",
+        order = "a",
         ingredients = {
             {type = "item", name ="basic-wiring", amount = 2},
             {type = "item", name ="basic-rod", amount = 1}
@@ -317,8 +488,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-rivets", amount = 4},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "rivets",
+        order = "a",
         ingredients = {
             {type = "item", name ="basic-rod", amount = 1}
         },
@@ -333,8 +504,8 @@ data:extend({
         results = {
             {type = "item", name ="tensile-plating", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "plating",
+        order = "c",
         ingredients = {
             {type = "item", name ="wolframite-powder", amount = 3},
             {type = "item", name ="basic-plating", amount = 2},
@@ -352,8 +523,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-piping", amount = 4},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "piping",
+        order = "a",
         ingredients = {
             {type = "item", name ="amalgam-ingot", amount = 1}
         },
@@ -369,7 +540,7 @@ data:extend({
             {type = "fluid", name ="oxygen", amount = 100},
         },
         subgroup = "raw-material",
-        order = "c-z",
+        order = "e",
         localised_name = {"", format_name("oxygen-condensing")}
     },
     {
@@ -382,7 +553,7 @@ data:extend({
             {type = "fluid", name ="hydrogen", amount = 100},
         },
         subgroup = "raw-material",
-        order = "c-z",
+        order = "e-b",
         localised_name = {"", format_name("hydrogen-condensing")}
     },
     {
@@ -395,7 +566,7 @@ data:extend({
             {type = "fluid", name ="nitrogen", amount = 100},
         },
         subgroup = "raw-material",
-        order = "c-z",
+        order = "e-c",
         localised_name = {"", format_name("nitrogen-condensing")}
     },
     {
@@ -408,7 +579,7 @@ data:extend({
             {type = "fluid", name ="chlorine", amount = 100},
         },
         subgroup = "raw-material",
-        order = "c-z",
+        order = "e-d",
         localised_name = {"", format_name("chlorine-condensing")}
     },
     {
@@ -425,7 +596,7 @@ data:extend({
             {type = "fluid", name ="hydrogen", amount = 100},
         },
         subgroup = "raw-material",
-        order = "c-z",
+        order = "f",
         localised_name = {"", format_name("water")}
     },
     {
@@ -442,7 +613,7 @@ data:extend({
             {type = "fluid", name ="sulfur-dioxide", amount = 150},
         },
         subgroup = "raw-material",
-        order = "c-z",
+        order = "f-b",
         localised_name = {"", format_name("sulfur-trioxide")}
     },
     {
@@ -459,7 +630,7 @@ data:extend({
             {type = "fluid", name ="sulfur-trioxide", amount = 200},
         },
         subgroup = "raw-material",
-        order = "c-z",
+        order = "f-c",
         localised_name = {"", format_name("sulfuric-acid")}
     },
     {
@@ -471,8 +642,8 @@ data:extend({
         results = {
             {type = "item", name ="stone", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "stone",
+        order = "g-a",
         ingredients = {
             {type = "item", name ="slag", amount = 1},
         },
@@ -492,7 +663,7 @@ data:extend({
             {type = "item", name ="stone", amount = 2},
         },
         subgroup = "raw-material",
-        order = "c-z",
+        order = "f-d",
         localised_name = {"", format_name("dirty-water")}
     },
     {
@@ -511,7 +682,7 @@ data:extend({
             {type = "fluid", name ="dirty-water", amount = 200},
         },
         subgroup = "raw-material",
-        order = "c-z",
+        order = "f-e",
         localised_name = {"", format_name("dirty-water-purification")}
     },
     {
@@ -526,8 +697,8 @@ data:extend({
             {type = "item", name ="crushed-amalgam", amount = 4},
             {type = "item", name ="slag", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "amalgam",
+        order = "a-c",
         ingredients = {
             {type = "item", name ="amalgam", amount = 2},
         },
@@ -546,8 +717,8 @@ data:extend({
             {type = "item", name ="crushed-pyrite", amount = 8},
             {type = "item", name ="slag", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "amalgam",
+        order = "a-d",
         ingredients = {
             {type = "item", name ="crushed-amalgam", amount = 25},
         },
@@ -568,8 +739,8 @@ data:extend({
         ingredients = {
             {type = "item", name ="crushed-pyrite", amount = 4},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "iron",
+        order = "h",
         localised_name = {"", format_name("crushed-pyrite-smelting")}
     },
     {
@@ -587,8 +758,8 @@ data:extend({
         ingredients = {
             {type = "item", name ="hematite", amount = 6},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "iron",
+        order = "h-b",
         localised_name = {"", format_name("hematite-smelting")}
     },
     {
@@ -603,8 +774,8 @@ data:extend({
         ingredients = {
             {type = "fluid", name ="molten-iron", amount = 10},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "iron",
+        order = "h-c",
         localised_name = {"", format_name("iron-ingot-casting")}
     },
     {
@@ -612,12 +783,12 @@ data:extend({
         name = "stone-crushing",
         enabled = false,
         category = "crushing",
-        energy_required = 2,
+        energy_required = 0.5,
         results = {
             {type = "item", name ="sand", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "stone",
+        order = "g-b",
         ingredients = {
             {type = "item", name ="stone", amount = 1},
         },
@@ -638,8 +809,8 @@ data:extend({
         ingredients = {
             {type = "item", name ="sand", amount = 12},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "stone",
+        order = "g-c",
         localised_name = {"", format_name("sand-smelting")}
     },
     {
@@ -654,8 +825,8 @@ data:extend({
         ingredients = {
             {type = "fluid", name ="molten-glass", amount = 20},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "stone",
+        order = "g-d",
         localised_name = {"", format_name("glass-casting")}
     },
     {
@@ -667,8 +838,8 @@ data:extend({
         results = {
             {type = "item", name ="iron-plate", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "iron",
+        order = "h-d",
         ingredients = {
             {type = "item", name ="iron-ingot", amount = 1},
         },
@@ -683,8 +854,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-plating", amount = 4},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "plating",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="iron-plate", amount = 1},
         },
@@ -699,8 +870,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-beam", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "beam",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="iron-plate", amount = 1},
         },
@@ -715,8 +886,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-spring", amount = 3},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "spring",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="iron-plate", amount = 1},
         },
@@ -731,8 +902,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-gear", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "gear",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="iron-plate", amount = 1},
         },
@@ -747,8 +918,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-piping", amount = 4},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "piping",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="iron-plate", amount = 1},
         },
@@ -763,8 +934,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-rod", amount = 4},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "rod",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="iron-plate", amount = 1},
         },
@@ -779,8 +950,8 @@ data:extend({
         results = {
             {type = "item", name ="basic-rivets", amount = 4},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "rivets",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="iron-plate", amount = 1},
         },
@@ -795,8 +966,8 @@ data:extend({
         results = {
             {type = "item", name ="glass-tube", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "glass",
+        order = "a",
         ingredients = {
             {type = "item", name ="glass", amount = 2},
         },
@@ -811,11 +982,81 @@ data:extend({
         results = {
             {type = "item", name ="lens", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "glass",
+        order = "b",
         ingredients = {
             {type = "item", name ="glass", amount = 4},
         },
         localised_name = {"", format_name("glass-lens")}
+    },
+    {
+        type = "recipe",
+        name = "beaker",
+        enabled = false,
+        category = "crafting",
+        energy_required = 1,
+        results = {
+            {type = "item", name ="empty-beaker", amount = 1},
+        },
+        subgroup = "glass",
+        order = "c",
+        ingredients = {
+            {type = "item", name ="glass", amount = 2},
+        },
+        localised_name = {"", format_name("empty-beaker")}
+    },
+    {
+        type = "recipe",
+        name = "chemical-utilization-science-pack",
+        enabled = false,
+        category = "crafting-with-fluid",
+        energy_required = 20,
+        results = {
+            {type = "item", name ="logistic-science-pack", amount = 2},
+        },
+        subgroup = "science-pack",
+        order = "a-b",
+        ingredients = {
+            {type = "item", name ="vacuum-tube", amount = 2},
+            {type = "item", name ="empty-beaker", amount = 2},
+            {type = "item", name ="lens", amount = 2},
+            {type = "fluid", name ="water", amount = 100},
+            {type = "fluid", name ="sulfuric-acid", amount = 100},
+        },
+        localised_name = {"", format_name("chemical-utilization-science-pack")}
+    },
+    {
+        type = "recipe",
+        name = "vacuum-tube",
+        enabled = false,
+        category = "crafting",
+        energy_required = 2,
+        results = {
+            {type = "item", name ="vacuum-tube", amount = 2},
+        },
+        subgroup = "intermediate-product",
+        order = "a-d",
+        ingredients = {
+            {type = "item", name ="glass-tube", amount = 1},
+            {type = "item", name ="basic-coil", amount = 2},
+            {type = "item", name ="basic-plating", amount = 4},
+            {type = "item", name ="basic-wiring", amount = 8},
+        },
+        localised_name = {"", format_name("vacuum-tube")}
+    },
+    {
+        type = "recipe",
+        name = "dirty-water-dumping",
+        enabled = false,
+        icon = "__delirium__/graphics/icons/recipes/dirty-water-dumping.png",
+        icon_size = 1024,
+        category = "chemistry",
+        energy_required = 1,
+        subgroup = "raw-material",
+        order = "f-f",
+        ingredients = {
+            {type = "fluid", name ="dirty-water", amount = 100},
+        },
+        localised_name = {"", format_name("dump-dirty-water-into-the-ground")}
     },
 })

@@ -14,7 +14,7 @@ data:extend({
             {type = "item", name ="transport-belt", amount = 2},
         },
         subgroup = "belt",
-        order = "c-z",
+        order = "a",
         ingredients = {
             {type = "item", name ="basic-plating", amount = 2},
             {type = "item", name ="basic-gear", amount = 1},
@@ -30,7 +30,7 @@ data:extend({
             {type = "item", name ="underground-belt", amount = 2},
         },
         subgroup = "belt",
-        order = "c-z",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="transport-belt", amount = 5},
             {type = "item", name ="basic-plating", amount = 10},
@@ -46,7 +46,7 @@ data:extend({
             {type = "item", name ="splitter", amount = 2},
         },
         subgroup = "belt",
-        order = "c-z",
+        order = "a-c",
         ingredients = {
             {type = "item", name ="basic-plating", amount = 4},
             {type = "item", name ="electronic-circuit", amount = 2},
@@ -63,7 +63,7 @@ data:extend({
             {type = "item", name ="burner-inserter", amount = 1},
         },
         subgroup = "inserter",
-        order = "c-z",
+        order = "a",
         ingredients = {
             {type = "item", name ="basic-plating", amount = 2},
             {type = "item", name ="basic-gear", amount = 1},
@@ -79,7 +79,7 @@ data:extend({
             {type = "item", name ="inserter", amount = 1},
         },
         subgroup = "inserter",
-        order = "c-z",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="basic-plating", amount = 1},
             {type = "item", name ="electronic-circuit", amount = 2},
@@ -96,7 +96,7 @@ data:extend({
             {type = "item", name ="long-handed-inserter", amount = 1},
         },
         subgroup = "inserter",
-        order = "c-z",
+        order = "a-c",
         ingredients = {
             {type = "item", name ="basic-plating", amount = 1},
             {type = "item", name ="electronic-circuit", amount = 2},
@@ -113,7 +113,7 @@ data:extend({
             {type = "item", name ="assembling-machine-1", amount = 2},
         },
         subgroup = "production-machine",
-        order = "c-z",
+        order = "a",
         ingredients = {
             {type = "item", name ="basic-plating", amount = 4},
             {type = "item", name ="electronic-circuit", amount = 2},
@@ -129,8 +129,8 @@ data:extend({
         results = {
             {type = "item", name ="electric-mining-drill", amount = 2},
         },
-        subgroup = "production-machine",
-        order = "c-z",
+        subgroup = "extraction-machine",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="basic-plating", amount = 4},
             {type = "item", name ="electronic-circuit", amount = 2},
@@ -146,8 +146,8 @@ data:extend({
         results = {
             {type = "item", name ="small-electric-pole", amount = 2},
         },
-        subgroup = "energy",
-        order = "c-z",
+        subgroup = "energy-pipe-distribution",
+        order = "c",
         ingredients = {
             {type = "item", name ="basic-rod", amount = 2},
             {type = "item", name ="basic-wiring", amount = 2},
@@ -162,8 +162,8 @@ data:extend({
         results = {
             {type = "item", name ="stone-furnace", amount = 1},
         },
-        subgroup = "production-machine",
-        order = "c-z",
+        subgroup = "smelting-machine",
+        order = "a",
         ingredients = {
             {type = "item", name ="calcite", amount = 5},
         },
@@ -178,7 +178,7 @@ data:extend({
             {type = "item", name ="lab", amount = 1},
         },
         subgroup = "production-machine",
-        order = "c-z",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="basic-plating", amount = 10},
             {type = "item", name ="electronic-circuit", amount = 2},
@@ -195,7 +195,7 @@ data:extend({
             {type = "item", name ="iron-chest", amount = 1},
         },
         subgroup = "storage",
-        order = "c-z",
+        order = "a",
         ingredients = {
             {type = "item", name ="basic-plating", amount = 8},
         },
@@ -209,8 +209,8 @@ data:extend({
         results = {
             {type = "item", name ="combustion-generator", amount = 1},
         },
-        subgroup = "energy",
-        order = "c-z",
+        subgroup = "energy-pipe-distribution",
+        order = "c",
         ingredients = {
             {type = "item", name ="calibration-coil", amount = 2},
             {type = "item", name ="alloy-support-structure", amount = 2},
@@ -227,7 +227,7 @@ data:extend({
             {type = "item", name ="crusher", amount = 1},
         },
         subgroup = "production-machine",
-        order = "c-z",
+        order = "a-c",
         ingredients = {
             {type = "item", name ="basic-gear", amount = 2},
             {type = "item", name ="alloy-support-structure", amount = 2},
@@ -244,8 +244,8 @@ data:extend({
         results = {
             {type = "item", name ="burner-mining-drill", amount = 1},
         },
-        subgroup = "production-machine",
-        order = "c-z",
+        subgroup = "extraction-machine",
+        order = "a",
         ingredients = {
             {type = "item", name ="stone-furnace", amount = 1},
             {type = "item", name ="basic-gear", amount = 1},
@@ -261,8 +261,8 @@ data:extend({
         results = {
             {type = "item", name ="pipe", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "energy-pipe-distribution",
+        order = "a",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 1}
         },
@@ -277,8 +277,8 @@ data:extend({
         results = {
             {type = "item", name ="pipe-to-ground", amount = 2},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "energy-pipe-distribution",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="basic-plating", amount = 5},
             {type = "item", name ="pipe", amount = 10}
@@ -294,8 +294,8 @@ data:extend({
         results = {
             {type = "item", name ="storage-tank", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "storage",
+        order = "a-b",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 4},
             {type = "item", name ="pipe", amount = 4},
@@ -312,8 +312,8 @@ data:extend({
         results = {
             {type = "item", name ="pump", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "energy-pipe-distribution",
+        order = "a-c",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 4},
             {type = "item", name ="pipe", amount = 2},
@@ -330,8 +330,8 @@ data:extend({
         results = {
             {type = "item", name ="valves-overflow", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "energy-pipe-distribution",
+        order = "a-d",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 2},
             {type = "item", name ="pipe", amount = 1},
@@ -348,8 +348,8 @@ data:extend({
         results = {
             {type = "item", name ="valves-top_up", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "energy-pipe-distribution",
+        order = "a-e",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 2},
             {type = "item", name ="pipe", amount = 1},
@@ -366,8 +366,8 @@ data:extend({
         results = {
             {type = "item", name ="valves-one_way", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "energy-pipe-distribution",
+        order = "a-f",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 2},
             {type = "item", name ="pipe", amount = 1},
@@ -384,8 +384,8 @@ data:extend({
         results = {
             {type = "item", name ="chemical-plant", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "production-machine",
+        order = "e",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 4},
             {type = "item", name ="pipe", amount = 4},
@@ -403,8 +403,8 @@ data:extend({
         results = {
             {type = "item", name ="oil-refinery", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "production-machine",
+        order = "e-b",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 4},
             {type = "item", name ="pipe", amount = 4},
@@ -422,8 +422,8 @@ data:extend({
         results = {
             {type = "item", name ="crystallizer", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "production-machine",
+        order = "e-c",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 4},
             {type = "item", name ="pipe", amount = 4},
@@ -441,8 +441,8 @@ data:extend({
         results = {
             {type = "item", name ="purifier", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "production-machine",
+        order = "e-d",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 4},
             {type = "item", name ="pipe", amount = 4},
@@ -460,8 +460,8 @@ data:extend({
         results = {
             {type = "item", name ="cooler", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "production-machine",
+        order = "e-e",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 4},
             {type = "item", name ="pipe", amount = 4},
@@ -479,8 +479,8 @@ data:extend({
         results = {
             {type = "item", name ="condenser", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "production-machine",
+        order = "e-f",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 2},
             {type = "item", name ="pipe", amount = 2},
@@ -498,8 +498,8 @@ data:extend({
         results = {
             {type = "item", name ="caster", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "production-machine",
+        order = "c",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 2},
             {type = "item", name ="pipe", amount = 2},
@@ -517,8 +517,8 @@ data:extend({
         results = {
             {type = "item", name ="arc-furnace", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "production-machine",
+        order = "c-b",
         ingredients = {
             {type = "item", name ="basic-piping", amount = 8},
             {type = "item", name ="pipe", amount = 4},
@@ -536,8 +536,8 @@ data:extend({
         results = {
             {type = "item", name ="ore-sorter", amount = 1},
         },
-        subgroup = "raw-material",
-        order = "c-z",
+        subgroup = "production-machine",
+        order = "c-c",
         ingredients = {
             {type = "item", name ="tensile-plating", amount = 4},
             {type = "item", name ="transport-belt", amount = 4},
@@ -545,5 +545,24 @@ data:extend({
             {type = "item", name ="basic-plating", amount = 12}
         },
         localised_name = {"", format_name("ore-sorting-facility")}
+    },
+    {
+        type = "recipe",
+        name = "assembler-2",
+        enabled = false,
+        category = "crafting",
+        energy_required = 1,
+        results = {
+            {type = "item", name ="assembling-machine-2", amount = 1},
+        },
+        subgroup = "production-machine",
+        order = "a-c",
+        ingredients = {
+            {type = "item", name ="tensile-plating", amount = 2},
+            {type = "item", name ="assembling-machine-1", amount = 1},
+            {type = "item", name ="electronic-circuit", amount = 2},
+            {type = "item", name ="basic-plating", amount = 12}
+        },
+        localised_name = {"", format_name("assembler-2")}
     },
 })

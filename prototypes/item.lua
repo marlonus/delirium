@@ -450,7 +450,7 @@ data:extend({
         {size = 1024, filename = "__delirium__/graphics/icons/items/resources/sodium-hydroxide.png", scale = 0.03125, mipmap_count = 4}
         },
         subgroup = "raw-material",
-        stack_size = 200,
+        stack_size = 100,
         icon_size = 1024,
     localised_name = {"", format_name("sodium-hydroxide")}
   },
@@ -463,9 +463,35 @@ data:extend({
         {size = 1024, filename = "__delirium__/graphics/icons/items/resources/crushed-bauxite.png", scale = 0.03125, mipmap_count = 4}
         },
         subgroup = "raw-material",
-        stack_size = 200,
+        stack_size = 50,
         icon_size = 1024,
     localised_name = {"", format_name("crushed-bauxite")}
+  },
+    {
+    type = "item",
+    name = "empty-beaker",
+    icon = "__delirium__/graphics/icons/items/intermediates/beaker.png",
+        pictures =
+        {
+        {size = 64, filename = "__delirium__/graphics/icons/items/intermediates/beaker.png", scale = 0.5, mipmap_count = 4}
+        },
+        subgroup = "raw-material",
+        stack_size = 100,
+        icon_size = 64,
+    localised_name = {"", format_name("empty-beaker")}
+  },
+    {
+    type = "item",
+    name = "vacuum-tube",
+    icon = "__delirium__/graphics/icons/items/intermediates/vacuum-tube.png",
+        pictures =
+        {
+        {size = 1024, filename = "__delirium__/graphics/icons/items/intermediates/vacuum-tube.png", scale = 0.03125, mipmap_count = 4}
+        },
+        subgroup = "raw-material",
+        stack_size = 100,
+        icon_size = 1024,
+    localised_name = {"", format_name("vacuum-tube")}
   },
 })
 
