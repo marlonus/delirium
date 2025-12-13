@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 13. 12. 2025
+  Major Features:
+    - Start of the 2nd science pack.
+  Minor Features:
+    - Added a few items.
+    - Fully reorganized the crafting GUI with new tabs and order.
+    - Added a recipe to dump dirty water into the ground.
+  Balancing:
+    - Adjusted a few recipe speeds.
+  Bugfixes:
+    - Graphical fixes.
+    - Recipe oversight fixes.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 11. 12. 2025
+  Major Features:
+    - Initial release.
