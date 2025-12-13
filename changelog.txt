@@ -11,7 +11,8 @@ Date: 13. 12. 2025
     - Adjusted a few recipe speeds.
   Bugfixes:
     - Graphical fixes.
-    - Recipe oversight fixes.
+    - Recipe fixes.
+    - Deleted the valve recipes from the research tree, as they are unlocked automatically due to the mod itself.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 11. 12. 2025
