@@ -1,11 +1,13 @@
-local basic_items = {"basic-beam","basic-bearing","basic-cable-ribbon","basic-cabling","basic-coil","basic-gear","basic-plating","basic-rivets","basic-solder","basic-spring","glass-tube","lens","radiation-resistant-plating","rubber-tube","tensile-plating","thermal-plating","thin-plating","magnet"}
+local big_items = {"circuit-substrate","basic-beam","basic-bearing","basic-cable-ribbon","basic-cabling","basic-coil","basic-gear","basic-plating","basic-rivets","basic-solder","basic-spring","glass-tube","lens","radiation-resistant-plating","rubber-tube","tensile-plating","thermal-plating","thin-plating","magnet"}
+local medium_items = {"aluminium-plate","advanced-wire"}
+local small_items = {"intermediate-circuit","resistor","transistor"}
 
     local function format_name(name)
         local formatted = name:gsub("%-", " ")
         return (formatted:gsub("^%l", string.upper))
     end
-    local function create_basic_item(itemname)
-        local basic_item_function = {
+    local function create_big_item(itemname)
+        local big_item_function = {
             type = "item",
             name = itemname,
             icon = "__delirium__/graphics/icons/items/intermediates/".. itemname .. ".png",
@@ -15,12 +17,50 @@ local basic_items = {"basic-beam","basic-bearing","basic-cable-ribbon","basic-ca
             stack_size = 100,
             localised_name = {"", format_name(itemname)}
         }
-        data:extend({basic_item_function})
-        return basic_item_function
+        data:extend({big_item_function})
+        return big_item_function
     end
 
-for name, itemname in ipairs(basic_items) do
-    create_basic_item(itemname)
+for name, itemname in ipairs(big_items) do
+    create_big_item(itemname)
+end
+
+    local function create_medium_item(itemname)
+        local medium_item_function = {
+            type = "item",
+            name = itemname,
+            icon = "__delirium__/graphics/icons/items/intermediates/".. itemname .. ".png",
+            icon_size = 128,
+            pictures = {{size = 128, filename = "__delirium__/graphics/icons/items/intermediates/".. itemname .. ".png", scale = 0.25, mipmap_count = 4}},
+            subgroup = "intermediate-product",
+            stack_size = 100,
+            localised_name = {"", format_name(itemname)}
+        }
+        data:extend({medium_item_function})
+        return medium_item_function
+    end
+
+for name, itemname in ipairs(medium_items) do
+    create_medium_item(itemname)
+end
+
+    local function create_small_item(itemname)
+        local small_item_function = {
+            type = "item",
+            name = itemname,
+            icon = "__delirium__/graphics/icons/items/intermediates/".. itemname .. ".png",
+            icon_size = 64,
+            pictures = {{size = 64, filename = "__delirium__/graphics/icons/items/intermediates/".. itemname .. ".png", scale = 0.5, mipmap_count = 4}},
+            subgroup = "intermediate-product",
+            stack_size = 100,
+            localised_name = {"", format_name(itemname)}
+        }
+        data:extend({small_item_function})
+        return small_item_function
+    end
+
+for name, itemname in ipairs(small_items) do
+    create_small_item(itemname)
 end
 
 data:extend({
@@ -492,6 +532,19 @@ data:extend({
         stack_size = 100,
         icon_size = 1024,
     localised_name = {"", format_name("vacuum-tube")}
+  },
+    {
+    type = "item",
+    name = "diode",
+    icon = "__delirium__/graphics/icons/items/intermediates/diode.png",
+        pictures =
+        {
+        {size = 256, filename = "__delirium__/graphics/icons/items/intermediates/diode.png", scale = 0.125, mipmap_count = 4}
+        },
+        subgroup = "raw-material",
+        stack_size = 100,
+        icon_size = 256,
+    localised_name = {"", format_name("diode")}
   },
 })
 

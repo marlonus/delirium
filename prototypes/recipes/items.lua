@@ -175,6 +175,12 @@ data:extend({
   group = "resources",
   order = "k"
     },
+    {
+  type = "item-subgroup",
+  name = "recycling",
+  group = "resources",
+  order = "l"
+    },
         {
         type = "recipe",
         name = "amalgam-smelting",
@@ -1052,8 +1058,8 @@ data:extend({
         icon_size = 1024,
         category = "chemistry",
         energy_required = 1,
-        subgroup = "raw-material",
-        order = "f-f",
+        subgroup = "recycling",
+        order = "a",
         ingredients = {
             {type = "fluid", name ="dirty-water", amount = 100},
         },

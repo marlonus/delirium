@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 11. 12. 2025
+  Major Features:
+    - Bauxite processing.
+  Minor Features:
+    - Multiple recycling recipes.
+    - Circuit networks now unlocked in the basic materials technology.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 13. 12. 2025
   Major Features:

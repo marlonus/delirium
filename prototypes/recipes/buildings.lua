@@ -565,4 +565,140 @@ data:extend({
         },
         localised_name = {"", format_name("assembler-2")}
     },
+        {
+        type = "recipe",
+        name = "arithmetic",
+        enabled = false,
+        category = "crafting",
+        energy_required = 1,
+        subgroup = "circuit-network",
+        order = "a",
+        results = {
+            {type = "item", name ="arithmetic-combinator", amount = 1},
+        },
+        ingredients = {
+            {type = "item", name ="basic-wiring", amount = 5},
+            {type = "item", name ="basic-plating", amount = 5},
+        },
+        localised_name = {"", format_name("arithmetic-combinator")}
+    },
+        {
+        type = "recipe",
+        name = "decider",
+        enabled = false,
+        category = "crafting",
+        energy_required = 1,
+        subgroup = "circuit-network",
+        order = "a-b",
+        results = {
+            {type = "item", name ="decider-combinator", amount = 1},
+        },
+        ingredients = {
+            {type = "item", name ="basic-wiring", amount = 5},
+            {type = "item", name ="basic-plating", amount = 5},
+        },
+        localised_name = {"", format_name("decider-combinator")}
+    },
+        {
+        type = "recipe",
+        name = "speaker",
+        enabled = false,
+        category = "crafting",
+        energy_required = 1,
+        subgroup = "circuit-network",
+        order = "b",
+        results = {
+            {type = "item", name ="programmable-speaker", amount = 1},
+        },
+        ingredients = {
+            {type = "item", name ="basic-wiring", amount = 5},
+            {type = "item", name ="basic-plating", amount = 5},
+        },
+        localised_name = {"", format_name("programmable-speaker")}
+    },
+        {
+        type = "recipe",
+        name = "switch",
+        enabled = false,
+        category = "crafting",
+        energy_required = 1,
+        subgroup = "circuit-network",
+        order = "b-b",
+        results = {
+            {type = "item", name ="power-switch", amount = 1},
+        },
+        ingredients = {
+            {type = "item", name ="basic-wiring", amount = 5},
+            {type = "item", name ="basic-plating", amount = 5},
+        },
+        localised_name = {"", format_name("power-switch")}
+    },
+        {
+        type = "recipe",
+        name = "lamp",
+        enabled = false,
+        category = "crafting",
+        energy_required = 1,
+        subgroup = "circuit-network",
+        order = "b-c",
+        results = {
+            {type = "item", name ="small-lamp", amount = 1},
+        },
+        ingredients = {
+            {type = "item", name ="basic-wiring", amount = 5},
+            {type = "item", name ="basic-plating", amount = 5},
+        },
+        localised_name = {"", format_name("lamp")}
+    },
+        {
+        type = "recipe",
+        name = "display",
+        enabled = false,
+        category = "crafting",
+        energy_required = 1,
+        subgroup = "circuit-network",
+        order = "b-d",
+        results = {
+            {type = "item", name ="display-panel", amount = 1},
+        },
+        ingredients = {
+            {type = "item", name ="basic-wiring", amount = 5},
+            {type = "item", name ="basic-plating", amount = 5},
+        },
+        localised_name = {"", format_name("display-panel")}
+    },
+        {
+        type = "recipe",
+        name = "selector",
+        enabled = false,
+        category = "crafting",
+        energy_required = 1,
+        subgroup = "circuit-network",
+        order = "a-c",
+        results = {
+            {type = "item", name ="selector-combinator", amount = 1},
+        },
+        ingredients = {
+            {type = "item", name ="basic-wiring", amount = 5},
+            {type = "item", name ="basic-plating", amount = 5},
+        },
+        localised_name = {"", format_name("selector-combinator")}
+    },
+        {
+        type = "recipe",
+        name = "constant",
+        enabled = false,
+        category = "crafting",
+        energy_required = 1,
+        subgroup = "circuit-network",
+        order = "a-d",
+        results = {
+            {type = "item", name ="constant-combinator", amount = 1},
+        },
+        ingredients = {
+            {type = "item", name ="basic-wiring", amount = 5},
+            {type = "item", name ="basic-plating", amount = 5},
+        },
+        localised_name = {"", format_name("constant-combinator")}
+    },
 })

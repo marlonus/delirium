@@ -85,6 +85,14 @@ data:extend({
                 {type = "unlock-recipe", recipe = "basic-rivets"},
                 {type = "unlock-recipe", recipe = "amalgam-basic-spring"},
                 {type = "unlock-recipe", recipe = "amalgam-basic-beam"},
+                {type = "unlock-recipe", recipe = "decider"},
+                {type = "unlock-recipe", recipe = "selector"},
+                {type = "unlock-recipe", recipe = "constant"},
+                {type = "unlock-recipe", recipe = "arithmetic"},
+                {type = "unlock-recipe", recipe = "lamp"},
+                {type = "unlock-recipe", recipe = "switch"},
+                {type = "unlock-recipe", recipe = "display"},
+                {type = "unlock-recipe", recipe = "speaker"},
         },
     },
     {
@@ -243,6 +251,8 @@ data:extend({
                 {type = "unlock-recipe", recipe = "amalgam-sorting"},
                 {type = "unlock-recipe", recipe = "dirty-water-purification"},
                 {type = "unlock-recipe", recipe = "dirty-water-dumping"},
+                {type = "unlock-recipe", recipe = "recycle-pyrite"},
+                {type = "unlock-recipe", recipe = "recycle-bauxite"},
         },
     },
     {
@@ -318,6 +328,35 @@ data:extend({
                 {type = "unlock-recipe", recipe = "assembler-2"},
                 {type = "unlock-recipe", recipe = "vacuum-tube"},
                 {type = "unlock-recipe", recipe = "chemical-utilization-science-pack"},
+        },
+    },
+    {
+        type = "technology",
+        name = "aluminium-processing",
+        icon = "__delirium__/graphics/icons/items/resources/aluminium-ingot.png",
+        icon_size = 1024,
+        essential = true,
+        prerequisites = {
+            "chemical-utilization-science-pack"
+        },
+          unit =
+        {
+            count = 10,
+            ingredients = {
+                {"automation-science-pack", 1}, 
+                {"logistic-science-pack", 1}
+            },
+            time = 10
+        },
+        effects = {
+                {type = "unlock-recipe", recipe = "dirty-water-repurposing"},
+                {type = "unlock-recipe", recipe = "sodium-hydroxide-solution"},
+                {type = "unlock-recipe", recipe = "sodium-aluminate"},
+                {type = "unlock-recipe", recipe = "red-mud-recycling"},
+                {type = "unlock-recipe", recipe = "alumina"},
+                {type = "unlock-recipe", recipe = "aluminium-ingot"},
+                {type = "unlock-recipe", recipe = "aluminium-plate"},
+                {type = "unlock-recipe", recipe = "advanced-wire"},
         },
     },
 })
